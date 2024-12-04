@@ -417,7 +417,6 @@
             @endif
         </div>
     </div>
-    <x-floating-message-icon />
 
 @yield('content')
 
@@ -956,7 +955,7 @@
         function updateOrderCount() {
             const orderCountBadge = document.getElementById('order-count'); // Check if the badge element exists
             const orderIcon = document.getElementById('orderIcon'); // Check if the icon element exists
-    
+
             // Proceed only if both elements exist
             if (orderCountBadge && orderIcon) {
                 $.ajax({
@@ -966,7 +965,7 @@
                         // Check if response and orderCount exist
                         if (response && response.orderCount !== undefined) {
                             const orderCount = parseInt(response.orderCount);
-    
+
                             // Update the order count span if there are orders
                             if (orderCount > 0) {
                                 $('#order-count').text(orderCount).show(); // Show the badge with the order count
@@ -983,27 +982,27 @@
                 console.warn('Order icon or count badge is not present in the DOM.');
             }
         }
-    
+
         // On page load, update the order count
         $(document).ready(function () {
             updateOrderCount(); // Update the order count on page load
-    
+
             // Refresh order count periodically (e.g., every 30 seconds)
             setInterval(updateOrderCount, 30000);
         });
-    
+
         // Ensure badge stays visible when hovering over the icon or popover
         document.addEventListener('DOMContentLoaded', function () {
             const orderIcon = document.getElementById('orderIcon');
             const orderCountBadge = document.getElementById('order-count');
-    
+
             if (orderIcon && orderCountBadge) {
                 orderIcon.addEventListener('mouseenter', function () {
                     if (parseInt(orderCountBadge.textContent) > 0) {
                         orderCountBadge.style.display = 'inline-block'; // Ensure badge is visible
                     }
                 });
-    
+
                 orderIcon.addEventListener('mouseleave', function () {
                     if (parseInt(orderCountBadge.textContent) > 0) {
                         orderCountBadge.style.display = 'inline-block'; // Keep badge visible if there are orders
@@ -1014,7 +1013,7 @@
             }
         });
     </script>
-    
+
     <script>
         function openChat() {
             alert('Opening chat...');
