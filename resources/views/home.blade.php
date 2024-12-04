@@ -1035,65 +1035,6 @@
     });
 </script>
 
-
-{{-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const productCarouselPopular = document.getElementById('productCarouselPopular');
-        const prevBtnPopular = document.getElementById('prevBtnPopular');
-        const nextBtnPopular = document.getElementById('nextBtnPopular');
-
-        const productItemWidth = document.querySelector('.product-item').offsetWidth;
-
-        // Scroll left
-        prevBtnPopular.addEventListener('click', function () {
-            productCarouselPopular.scrollBy({
-                left: -productItemWidth * 3, // Scroll 3 items at a time
-                behavior: 'smooth'
-            });
-        });
-
-        // Scroll right
-        nextBtnPopular.addEventListener('click', function () {
-            productCarouselPopular.scrollBy({
-                left: productItemWidth * 3, // Scroll 3 items at a time
-                behavior: 'smooth'
-            });
-        });
-    });
-</script> --}}
-{{-- <script defer>
-    document.addEventListener('DOMContentLoaded', function() {
-        const productCarouselAll = document.getElementById('productCarouselAll');
-        const prevBtnAll = document.getElementById('prevBtnProductAll');
-        const nextBtnAll = document.getElementById('nextBtnProductAll');
-
-        const scrollAmount = 600;
-
-        if (productCarouselAll && prevBtnAll && nextBtnAll) {
-            console.log("Elements found, initializing carousel...");
-            // Scroll left
-            prevBtnAll.addEventListener('click', function () {
-                console.log("Prev button clicked");
-                productCarouselAll.scrollBy({
-                    left: -scrollAmount,
-                    behavior: 'smooth'
-                });
-            });
-
-            // Scroll right
-            nextBtnAll.addEventListener('click', function () {
-                console.log("Next button clicked");
-                productCarouselAll.scrollBy({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-            });
-        } else {
-            console.error("Carousel or buttons not found");
-        }
-    });
-</script> --}}
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Function to change the background image
@@ -1159,33 +1100,6 @@
     });
 </script>
 
-{{-- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const prevBtn = document.getElementById('prevBtnRecentlyAdded');
-    const nextBtn = document.getElementById('nextBtnRecentlyAdded');
-    const productCarousel = document.getElementById('productCarouselRecentlyAdded');
-
-        // Set the scroll amount based on the card width
-        const scrollAmount = 200; // Adjust this value as needed
-
-        // Event listener for the previous button
-        prevBtn.addEventListener('click', function () {
-            productCarousel.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-
-        // Event listener for the next button
-        nextBtn.addEventListener('click', function () {
-            productCarousel.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-    });
-
-</script> --}}
 
 
 @endsection
